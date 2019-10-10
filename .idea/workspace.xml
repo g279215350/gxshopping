@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ade9b1e-c535-496b-9cfc-a58649542e64" name="Default Changelist" comment="" />
+    <list default="true" id="3ade9b1e-c535-496b-9cfc-a58649542e64" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_javaewah_JavaEWAH_1_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jcraft_jsch_0_1_54.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jcraft_jzlib_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jgit_org_eclipse_jgit_4_11_0_201803080745_r.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jgit_org_eclipse_jgit_http_apache_4_11_0_201803080745_r.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_config_client_2_0_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_config_server_2_0_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_config_2_0_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.ignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-configuration/gxshopping-configuration.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-configuration/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-configuration/src/main/java/yahaha/gxshopping/ConfigurationApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-configuration/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-configuration/target/classes/yahaha/gxshopping/ConfigurationApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-plat-parent/plat-service/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-plat-parent/plat-service/target/classes/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-zuul/target/classes/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gxshopping-plat-parent/plat-service/plat-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gxshopping-plat-parent/plat-service/plat-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gxshopping-plat-parent/plat-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gxshopping-plat-parent/plat-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gxshopping-plat-parent/plat-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gxshopping-configuration/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gxshopping-zuul/gxshopping-zuul.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gxshopping-zuul/gxshopping-zuul.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gxshopping-zuul/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gxshopping-zuul/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gxshopping-zuul/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gxshopping-zuul/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +44,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -34,11 +67,16 @@
     <option name="jreName" value="1.8" />
   </component>
   <component name="ProjectId" id="1RupQ73EamTBCyRpfofYQ9Dnohi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -65,7 +103,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ZuulApplication">
+  <component name="RunManager" selected="Spring Boot.PlatApplication">
+    <configuration name="ConfigurationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="gxshopping-configuration" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="yahaha.gxshopping.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="yahaha.gxshopping.ConfigurationApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="gxshopping-eureka" />
       <extension name="coverage">
@@ -107,8 +158,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ZuulApplication" />
         <item itemvalue="Spring Boot.PlatApplication" />
+        <item itemvalue="Spring Boot.ZuulApplication" />
+        <item itemvalue="Spring Boot.ConfigurationApplication" />
         <item itemvalue="Spring Boot.EurekaApplication" />
       </list>
     </recent_temporary>
@@ -117,7 +169,17 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand />
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@214c006c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@214c006c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@ef9635e3" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
           <select />
         </treeState>
       </serviceView>
@@ -138,10 +200,25 @@
       <workItem from="1570580761126" duration="2820000" />
       <workItem from="1570667227927" duration="333000" />
       <workItem from="1570672080315" duration="603000" />
+      <workItem from="1570673367055" duration="5422000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

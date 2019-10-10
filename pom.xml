@@ -13,6 +13,8 @@
         <module>gxshopping-plat-parent</module>
         <module>gxshopping-basic</module>
         <module>gxshopping-zuul</module>
+        <module>gxshopping-configuration</module>
+        <module>gxshopping-configuration</module>
     </modules>
 
     <properties>
