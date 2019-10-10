@@ -1,0 +1,21 @@
+server:
+  port: 8100
+
+spring:
+  application:
+    name: GXSHOPPING-ZUUL
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://root:root@localhost:8761/eureka/  #由于Eureka设置了登陆才能访问，所以在注册中心路径这需要加上密码和账户
+
+zuul:
+  ignoredServices: '*' #只能通过路由访问，不能使用服务名访问
+  routes:
+    plat:
+      serviceId: GXSHOPPING-PLAT
+      path: /plat/**
+  prefix: /services

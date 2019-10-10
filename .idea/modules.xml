@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/GXShopping.iml" filepath="$PROJECT_DIR$/.idea/GXShopping.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gxshopping-basic/basic-util/basic-util.iml" filepath="$PROJECT_DIR$/gxshopping-basic/basic-util/basic-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gxshopping-basic/gxshopping-basic.iml" filepath="$PROJECT_DIR$/gxshopping-basic/gxshopping-basic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gxshopping-eureka/gxshopping-eureka.iml" filepath="$PROJECT_DIR$/gxshopping-eureka/gxshopping-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gxshopping-plat-parent/gxshopping-plat-parent.iml" filepath="$PROJECT_DIR$/gxshopping-plat-parent/gxshopping-plat-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gxshopping-zuul/gxshopping-zuul.iml" filepath="$PROJECT_DIR$/gxshopping-zuul/gxshopping-zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gxshopping-plat-parent/plat-interface/plat-interface.iml" filepath="$PROJECT_DIR$/gxshopping-plat-parent/plat-interface/plat-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gxshopping-plat-parent/plat-service/plat-service.iml" filepath="$PROJECT_DIR$/gxshopping-plat-parent/plat-service/plat-service.iml" />
+    </modules>
+  </component>
+</project>

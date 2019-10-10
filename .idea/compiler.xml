@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="plat-interface" />
+        <module name="basic-util" />
+        <module name="plat-service" />
+        <module name="gxshopping-eureka" />
+        <module name="gxshopping-zuul" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="basic-util" target="1.8" />
+      <module name="GXShopping" target="1.8" />
+      <module name="gxshopping-basic" target="1.8" />
+      <module name="gxshopping-eureka" target="1.8" />
+      <module name="gxshopping-plat-parent" target="1.8" />
+      <module name="gxshopping-zuul" target="1.8" />
+      <module name="plat-interface" target="1.8" />
+      <module name="plat-service" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
