@@ -15,6 +15,7 @@ spring:
     config:
       server:
         git:
+#          uri: https://github.com/as14141015/gofishing-config.git
           uri: https://github.com/g279215350/config.git
   application:
     name: GXSHOPPING-CONFIG

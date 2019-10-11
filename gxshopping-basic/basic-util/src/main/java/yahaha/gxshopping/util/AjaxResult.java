@@ -4,7 +4,7 @@ public class AjaxResult {
 
     private Boolean success = true;
 
-    private String massage = "成功";
+    private String message = "成功";
 
     //若需要返回对象，直接封装到这
     private Object restObj;
@@ -22,12 +22,12 @@ public class AjaxResult {
         return this;
     }
 
-    public String getMassage() {
-        return massage;
+    public String getMessage() {
+        return message;
     }
 
-    public AjaxResult setMassage(String massage) {
-        this.massage = massage;
+    public AjaxResult setMessage(String message) {
+        this.message = message;
         return this;
     }
 

@@ -1,36 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ade9b1e-c535-496b-9cfc-a58649542e64" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_javaewah_JavaEWAH_1_1_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jcraft_jsch_0_1_54.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jcraft_jzlib_1_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jgit_org_eclipse_jgit_4_11_0_201803080745_r.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jgit_org_eclipse_jgit_http_apache_4_11_0_201803080745_r.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_config_client_2_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_config_server_2_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_config_2_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.ignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gxshopping-configuration/gxshopping-configuration.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gxshopping-configuration/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gxshopping-configuration/src/main/java/yahaha/gxshopping/ConfigurationApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gxshopping-configuration/target/classes/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gxshopping-configuration/target/classes/yahaha/gxshopping/ConfigurationApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gxshopping-plat-parent/plat-service/src/main/resources/bootstrap.yml" afterDir="false" />
+    <list default="true" id="3ade9b1e-c535-496b-9cfc-a58649542e64" name="Default Changelist" comment="配置中心">
       <change afterPath="$PROJECT_DIR$/gxshopping-plat-parent/plat-service/target/classes/bootstrap.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gxshopping-zuul/target/classes/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-zuul/src/main/java/yahaha/gxshopping/congif/GlobalCorsConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gxshopping-plat-parent/plat-service/plat-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gxshopping-plat-parent/plat-service/plat-service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gxshopping-plat-parent/plat-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gxshopping-plat-parent/plat-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gxshopping-plat-parent/plat-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gxshopping-configuration/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gxshopping-zuul/gxshopping-zuul.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gxshopping-zuul/gxshopping-zuul.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gxshopping-zuul/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gxshopping-zuul/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gxshopping-zuul/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gxshopping-zuul/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gxshopping-basic/basic-util/src/main/java/yahaha/gxshopping/util/AjaxResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/gxshopping-basic/basic-util/src/main/java/yahaha/gxshopping/util/AjaxResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gxshopping-configuration/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gxshopping-configuration/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gxshopping-plat-parent/plat-service/src/main/java/yahaha/gxshopping/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gxshopping-plat-parent/plat-service/src/main/java/yahaha/gxshopping/controller/LoginController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +62,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -172,12 +150,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@214c006c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@3fcccc32" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@214c006c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@ef9635e3" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@3fcccc32" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@341c0b8" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -200,8 +178,28 @@
       <workItem from="1570580761126" duration="2820000" />
       <workItem from="1570667227927" duration="333000" />
       <workItem from="1570672080315" duration="603000" />
-      <workItem from="1570673367055" duration="5422000" />
+      <workItem from="1570673367055" duration="9930000" />
+      <workItem from="1570696174853" duration="1343000" />
+      <workItem from="1570754908211" duration="3643000" />
+      <workItem from="1570780892090" duration="1447000" />
+      <workItem from="1570786733587" duration="2127000" />
+      <workItem from="1570791469625" duration="4583000" />
     </task>
+    <task id="LOCAL-00001" summary="配置中心">
+      <created>1570678939954</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1570678939954</updated>
+    </task>
+    <task id="LOCAL-00002" summary="忽略target">
+      <created>1570679923852</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1570679923852</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,7 +210,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -220,5 +220,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="配置中心" />
+    <MESSAGE value="忽略target" />
+    <option name="LAST_COMMIT_MESSAGE" value="忽略target" />
   </component>
 </project>
