@@ -15,6 +15,7 @@
         <module>gxshopping-zuul</module>
         <module>gxshopping-configuration</module>
         <module>gxshopping-configuration</module>
+        <module>gxshopping-product-parent</module>
     </modules>
 
     <properties>

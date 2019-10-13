@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    config:
+      name: application-product
+      profile: dev  # 环境
+      discovery:
+        service-id: GXSHOPPING-CONFIG
+        enabled: true # 开启
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      #因为注册中心配置了需要登陆才能访问，所以需要在配置注册中心这加上登陆账户和密码
+      defaultZone: http://root:root@localhost:8761/eureka/
+logging:
+  level:
+    yahaha.gxshopping: debug

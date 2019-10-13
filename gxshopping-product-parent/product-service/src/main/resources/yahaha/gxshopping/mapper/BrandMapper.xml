@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yahaha.gxshopping.mapper.BrandMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="yahaha.gxshopping.domain.Brand">
+        <id column="id" property="id" />
+        <result column="createTime" property="createTime" />
+        <result column="updateTime" property="updateTime" />
+        <result column="name" property="name" />
+        <result column="englishName" property="englishName" />
+        <result column="firstLetter" property="firstLetter" />
+        <result column="description" property="description" />
+        <result column="product_type_id" property="productTypeId" />
+        <result column="sortIndex" property="sortIndex" />
+        <result column="logo" property="logo" />
+        <association property="productType" javaType="yahaha.gxshopping.domain.ProductType">
+            <id column="tid" property="id"/>
+            <result column="tname" property="name"/>
+            <result column="tpath" property="path"/>
+        </association>
+    </resultMap>
+
+    <select id="pageQuery" resultMap="BaseResultMap">
+        select tb.*, tpy.id tid, tpy.name tname, tpy.path tpath
+        from t_brand tb left join t_product_type tpy on tb.product_type_id = tpy.id
+        <include refid="keywordCondition"></include>
+    </select>
+    <sql id="keywordCondition" >
+        <where>
+            <if test="#{query.keyword}!=null">
+                and ( tb.name like concat('%',#{query.keyword},'%')
+                or tb.englishName like concat('%',#{query.keyword},'%') )
+            </if>
+        </where>
+    </sql>
+
+</mapper>

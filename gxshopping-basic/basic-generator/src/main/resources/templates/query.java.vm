@@ -1,0 +1,10 @@
+package yahaha.gxshopping.query;
+
+
+/**
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+public class ${table.entityName}Query extends BaseQuery{
+}

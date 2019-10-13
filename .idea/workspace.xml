@@ -2,13 +2,102 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ade9b1e-c535-496b-9cfc-a58649542e64" name="Default Changelist" comment="配置中心">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_3_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_annotation_3_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_boot_starter_3_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_core_3_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_extension_3_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_generator_3_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_2_7_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_26.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_7_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_velocity_velocity_engine_core_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_15_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_0_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_0_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_0_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_0_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_0_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_0_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_0_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-basic/basic-generator/basic-generator.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-basic/basic-generator/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-basic/basic-generator/src/main/java/yahaha/gxshopping/tuil/CodeGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-basic/basic-generator/src/main/resources/generator-product.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-basic/basic-generator/src/main/resources/templates/controller.java.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-basic/basic-generator/src/main/resources/templates/query.java.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-basic/basic-util/src/main/java/yahaha/gxshopping/util/BitStatesUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-basic/basic-util/src/main/java/yahaha/gxshopping/util/ClassUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-basic/basic-util/src/main/java/yahaha/gxshopping/util/CodeGenerateUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-basic/basic-util/src/main/java/yahaha/gxshopping/util/GlobalSetting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-basic/basic-util/src/main/java/yahaha/gxshopping/util/LetterUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-basic/basic-util/src/main/java/yahaha/gxshopping/util/ProductStateConsts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-basic/basic-util/src/main/java/yahaha/gxshopping/util/PropertiesHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-basic/basic-util/src/main/java/yahaha/gxshopping/util/StrUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-basic/basic-util/src/main/java/yahaha/gxshopping/util/encrypt/DES.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-basic/basic-util/src/main/java/yahaha/gxshopping/util/encrypt/MD5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-basic/basic-util/src/main/java/yahaha/gxshopping/util/query/BaseQuery.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/gxshopping-plat-parent/plat-service/target/classes/bootstrap.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gxshopping-zuul/src/main/java/yahaha/gxshopping/congif/GlobalCorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/gxshopping-product-parent.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-interface/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-interface/product-interface.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-interface/src/main/java/yahaha/gxshopping/domain/Brand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-interface/src/main/java/yahaha/gxshopping/domain/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-interface/src/main/java/yahaha/gxshopping/domain/ProductType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-interface/src/main/java/yahaha/gxshopping/query/BrandQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-interface/src/main/java/yahaha/gxshopping/query/ProductQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-interface/src/main/java/yahaha/gxshopping/query/ProductTypeQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-service/product-service.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/java/yahaha/gxshopping/ProductApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/java/yahaha/gxshopping/config/MybatisPlusConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/java/yahaha/gxshopping/config/Swagger2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/java/yahaha/gxshopping/controller/BrandController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/java/yahaha/gxshopping/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/java/yahaha/gxshopping/controller/ProductTypeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/java/yahaha/gxshopping/mapper/BrandMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/java/yahaha/gxshopping/mapper/ProductMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/java/yahaha/gxshopping/mapper/ProductTypeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/java/yahaha/gxshopping/service/IBrandService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/java/yahaha/gxshopping/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/java/yahaha/gxshopping/service/IProductTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/java/yahaha/gxshopping/service/impl/BrandServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/java/yahaha/gxshopping/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/java/yahaha/gxshopping/service/impl/ProductTypeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/resources/yahaha/gxshopping/mapper/BrandMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/resources/yahaha/gxshopping/mapper/ProductMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/resources/yahaha/gxshopping/mapper/ProductTypeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/test/java/yahaha/gxshopping/service/impl/BrandServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gxshopping-basic/basic-util/src/main/java/yahaha/gxshopping/util/AjaxResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/gxshopping-basic/basic-util/src/main/java/yahaha/gxshopping/util/AjaxResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gxshopping-configuration/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gxshopping-configuration/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gxshopping-plat-parent/plat-service/src/main/java/yahaha/gxshopping/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gxshopping-plat-parent/plat-service/src/main/java/yahaha/gxshopping/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gxshopping-basic/basic-util/src/main/java/yahaha/gxshopping/util/PageList.java" beforeDir="false" afterPath="$PROJECT_DIR$/gxshopping-basic/basic-util/src/main/java/yahaha/gxshopping/util/PageList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gxshopping-basic/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gxshopping-basic/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gxshopping-zuul/src/main/java/yahaha/gxshopping/congif/DocumentationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gxshopping-zuul/src/main/java/yahaha/gxshopping/congif/DocumentationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,14 +105,51 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="gxshopping-product@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="gxshopping-product@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="gxshopping-product@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="gxshopping-product: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
@@ -50,6 +176,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -57,12 +184,33 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/gxshopping-basic/basic-generator/src/main/resources" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="yahaha.gxshopping.service.impl" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\java\IdeaProjects\gxshopping\gxshopping-basic\basic-generator\src\main\resources" />
+      <recent name="D:\java\IdeaProjects\gxshopping\gxshopping-basic\basic-util\src\main\java\yahaha\gxshopping\util" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="yahaha.gxshopping.config" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\java\IdeaProjects\gxshopping\gxshopping-basic\basic-generator\src\main\resources\templates" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -81,7 +229,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.PlatApplication">
+  <component name="RunManager" selected="JUnit.BrandServiceImplTest.queryPage">
+    <configuration name="BrandServiceImplTest.queryPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="product-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="yahaha.gxshopping.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="yahaha.gxshopping.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="yahaha.gxshopping.service.impl.BrandServiceImplTest" />
+      <option name="METHOD_NAME" value="queryPage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ConfigurationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="gxshopping-configuration" />
       <extension name="coverage">
@@ -95,19 +259,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="gxshopping-eureka" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="yahaha.gxshopping.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="yahaha.gxshopping.EurekaApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="PlatApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="plat-service" />
       <extension name="coverage">
@@ -117,6 +268,19 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="yahaha.gxshopping.PlatApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="product-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="yahaha.gxshopping.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="yahaha.gxshopping.ProductApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -136,26 +300,37 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.PlatApplication" />
+        <item itemvalue="Spring Boot.ProductApplication" />
+        <item itemvalue="JUnit.BrandServiceImplTest.queryPage" />
         <item itemvalue="Spring Boot.ZuulApplication" />
         <item itemvalue="Spring Boot.ConfigurationApplication" />
-        <item itemvalue="Spring Boot.EurekaApplication" />
+        <item itemvalue="Spring Boot.PlatApplication" />
       </list>
     </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="allServicesViewState">
       <serviceView>
+        <option name="contentProportion" value="0.1650433" />
         <treeState>
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@3fcccc32" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@dc416573" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@3fcccc32" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@341c0b8" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@dc416573" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@d0256080" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@961a418a" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@961a418a" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@458bf399" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -183,7 +358,11 @@
       <workItem from="1570754908211" duration="3643000" />
       <workItem from="1570780892090" duration="1447000" />
       <workItem from="1570786733587" duration="2127000" />
-      <workItem from="1570791469625" duration="4583000" />
+      <workItem from="1570791469625" duration="4775000" />
+      <workItem from="1570805896917" duration="609000" />
+      <workItem from="1570846333903" duration="1885000" />
+      <workItem from="1570871060631" duration="17873000" />
+      <workItem from="1570944499088" duration="21533000" />
     </task>
     <task id="LOCAL-00001" summary="配置中心">
       <created>1570678939954</created>
@@ -199,7 +378,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570679923852</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="前后端联调，登录">
+      <created>1570802678173</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1570802678173</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +408,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="配置中心" />
     <MESSAGE value="忽略target" />
-    <option name="LAST_COMMIT_MESSAGE" value="忽略target" />
+    <MESSAGE value="前后端联调，登录" />
+    <option name="LAST_COMMIT_MESSAGE" value="前后端联调，登录" />
   </component>
 </project>
