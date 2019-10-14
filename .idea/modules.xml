@@ -5,7 +5,10 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/GXShopping.iml" filepath="$PROJECT_DIR$/.idea/GXShopping.iml" />
       <module fileurl="file://$PROJECT_DIR$/gxshopping-basic/basic-generator/basic-generator.iml" filepath="$PROJECT_DIR$/gxshopping-basic/basic-generator/basic-generator.iml" />
       <module fileurl="file://$PROJECT_DIR$/gxshopping-basic/basic-util/basic-util.iml" filepath="$PROJECT_DIR$/gxshopping-basic/basic-util/basic-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gxshopping-common-parent/common-interface/common-interface.iml" filepath="$PROJECT_DIR$/gxshopping-common-parent/common-interface/common-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gxshopping-common-parent/common-service/common-service.iml" filepath="$PROJECT_DIR$/gxshopping-common-parent/common-service/common-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/gxshopping-basic/gxshopping-basic.iml" filepath="$PROJECT_DIR$/gxshopping-basic/gxshopping-basic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gxshopping-common-parent/gxshopping-common-parent.iml" filepath="$PROJECT_DIR$/gxshopping-common-parent/gxshopping-common-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/gxshopping-configuration/gxshopping-configuration.iml" filepath="$PROJECT_DIR$/gxshopping-configuration/gxshopping-configuration.iml" />
       <module fileurl="file://$PROJECT_DIR$/gxshopping-eureka/gxshopping-eureka.iml" filepath="$PROJECT_DIR$/gxshopping-eureka/gxshopping-eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/gxshopping-plat-parent/gxshopping-plat-parent.iml" filepath="$PROJECT_DIR$/gxshopping-plat-parent/gxshopping-plat-parent.iml" />

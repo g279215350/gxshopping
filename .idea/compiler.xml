@@ -8,20 +8,25 @@
         <outputRelativeToContentRoot value="true" />
         <module name="plat-interface" />
         <module name="gxshopping-zuul" />
-        <module name="plat-service" />
-        <module name="basic-generator" />
         <module name="gxshopping-configuration" />
+        <module name="common-interface" />
+        <module name="plat-service" />
         <module name="gxshopping-eureka" />
+        <module name="basic-util" />
         <module name="product-service" />
         <module name="product-interface" />
-        <module name="basic-util" />
+        <module name="basic-generator" />
+        <module name="common-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="basic-generator" target="1.8" />
       <module name="basic-util" target="1.8" />
+      <module name="common-interface" target="1.8" />
+      <module name="common-service" target="1.8" />
       <module name="GXShopping" target="1.8" />
       <module name="gxshopping-basic" target="1.8" />
+      <module name="gxshopping-common-parent" target="1.8" />
       <module name="gxshopping-configuration" target="1.8" />
       <module name="gxshopping-eureka" target="1.8" />
       <module name="gxshopping-plat-parent" target="1.8" />

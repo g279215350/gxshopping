@@ -17,4 +17,8 @@ public interface IProductTypeService extends IService<ProductType> {
 
     List<ProductType> loadTreeMenu();
 
+    List<ProductType> loadTreeType();
+
+    void genHomePage();
+
 }
