@@ -70,6 +70,13 @@
             <version>1.7</version>
         </dependency>
 
+        <!--fastdfs-client-->
+        <dependency>
+            <groupId>yahaha</groupId>
+            <artifactId>fastdfs-client</artifactId>
+            <version>1.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>

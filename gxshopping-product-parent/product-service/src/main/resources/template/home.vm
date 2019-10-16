@@ -1,6 +1,6 @@
 #set ($template=$model.staticRoot+"template/home/common-link.vm")
 #parse($template)
-		<title>爱购网 - 购我所爱 I LOVE BUY yoyoyo~~~</title>
+		<title>共享购物 - 分享你所爱 SHARE YOUR LOVE</title>
 	</head>
 
 	<body class="pace-done">

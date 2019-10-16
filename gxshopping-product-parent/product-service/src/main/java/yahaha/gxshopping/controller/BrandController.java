@@ -27,7 +27,7 @@ public class BrandController {
     */
     @RequestMapping(value="/add",method= RequestMethod.POST)
     public AjaxResult save(@RequestBody Brand brand){
-        brand.setFirstLetter(LetterUtil.getFirstLetter(brand.getName()));
+        brand.setFirstLetter(LetterUtil.getFirstLetter(brand.getName()).toUpperCase());
         System.out.println(brand);
         try {
             if(brand.getId()!=null){

@@ -28,4 +28,16 @@ public class BrandServiceImpl extends ServiceImpl<BrandMapper, Brand> implements
                 baseMapper.pageQuery(new Page(brandQuery.getPage(), brandQuery.getRows()), brandQuery);
         return new PageList<>(iPage.getTotal(), iPage.getRecords());
     }
+
+    @Override
+    public boolean save(Brand brand) {
+        brand.setCreateTime(System.currentTimeMillis());
+        return super.save(brand);
+    }
+
+    @Override
+    public boolean updateById(Brand brand) {
+        brand.setUpdateTime(System.currentTimeMillis());
+        return super.updateById(brand);
+    }
 }
