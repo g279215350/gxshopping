@@ -1,8 +1,11 @@
 package yahaha.gxshopping.mapper;
 
-import org.springframework.stereotype.Component;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import org.apache.ibatis.annotations.Param;
 import yahaha.gxshopping.domain.Product;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import yahaha.gxshopping.query.ProductQuery;
 
 /**
  * <p>
@@ -10,9 +13,9 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * </p>
  *
  * @author gpl
- * @since 2019-10-12
+ * @since 2019-10-17
  */
-@Component
 public interface ProductMapper extends BaseMapper<Product> {
 
+    IPage<Product> pageQuery(Page page, @Param("query")ProductQuery query);
 }

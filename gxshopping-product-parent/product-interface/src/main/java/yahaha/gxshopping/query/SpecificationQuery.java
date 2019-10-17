@@ -8,5 +8,5 @@ import yahaha.gxshopping.util.query.BaseQuery;
  * @author gpl
  * @since 2019-10-17
  */
-public class ProductQuery extends BaseQuery {
+public class SpecificationQuery extends BaseQuery {
 }

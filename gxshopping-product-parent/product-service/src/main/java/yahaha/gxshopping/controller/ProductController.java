@@ -1,5 +1,7 @@
 package yahaha.gxshopping.controller;
 
+import yahaha.gxshopping.domain.Brand;
+import yahaha.gxshopping.query.BrandQuery;
 import yahaha.gxshopping.service.IProductService;
 import yahaha.gxshopping.domain.Product;
 import yahaha.gxshopping.query.ProductQuery;
@@ -9,6 +11,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import yahaha.gxshopping.util.StrUtils;
 
 import java.util.List;
 
@@ -54,6 +57,18 @@ public class ProductController {
         }
     }
 
+    //批量删除
+    @RequestMapping(value = "/deleteBatch/{ids}", method = RequestMethod.POST)
+    public AjaxResult deleteBatch(@PathVariable("ids") String ids){
+        try {
+            productService.removeByIds(StrUtils.splitStr2LongArr(ids));
+            return AjaxResult.me();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return AjaxResult.me().setSuccess(false).setMessage("操作失败！" + e.getMessage());
+        }
+    }
+
     //获取
     @RequestMapping(value = "/{id}",method = RequestMethod.GET)
     public Product get(@PathVariable("id") Long id)
@@ -84,6 +99,11 @@ public class ProductController {
     {
         Page<Product> page = new Page<Product>(query.getPage(),query.getRows());
         IPage<Product> ipage = productService.page(page);
-        return new PageList<Product>(ipage.getTotal(),ipage.getRecords());
+        return new PageList<>(ipage.getTotal(),ipage.getRecords());
+    }
+
+    @RequestMapping(value = "/queryPage", method = RequestMethod.POST)
+    public PageList<Product> queryPage(@RequestBody ProductQuery productQuery){
+        return productService.queryPage(productQuery);
     }
 }

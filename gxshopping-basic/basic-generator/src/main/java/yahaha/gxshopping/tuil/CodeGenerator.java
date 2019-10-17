@@ -27,6 +27,8 @@ public class CodeGenerator {
         gc.setAuthor(rb.getString("author"));
         gc.setOpen(false);
         gc.setBaseResultMap(true);
+        //设置是否重新生成覆盖原文件
+//        gc.setFileOverride(true);
         // gc.setSwagger2(true); 实体属性 Swagger2 注解
         mpg.setGlobalConfig(gc);
 
@@ -118,7 +120,7 @@ public class CodeGenerator {
         strategy.setEntityLombokModel(true);
 
         //生成哪些表的代码
-        strategy.setInclude("t_brand","t_product_type","t_product");
+        strategy.setInclude("t_product_comment","t_product_ext","t_product","t_sku","t_specification");
         strategy.setTablePrefix("t_");
         mpg.setStrategy(strategy);
         mpg.execute();

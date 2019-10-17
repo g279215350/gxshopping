@@ -25,6 +25,33 @@
         <result column="goodCommentCount" property="goodCommentCount" />
         <result column="commonCommentCount" property="commonCommentCount" />
         <result column="badCommentCount" property="badCommentCount" />
+        <result column="skuProperties" property="skuProperties" />
+        <result column="medias" property="medias" />
+        <association property="productType" javaType="yahaha.gxshopping.domain.ProductType">
+            <id column="product_type_id" property="id"/>
+            <result column="typeName" property="name"/>
+            <result column="typePath" property="path"/>
+        </association>
+        <association property="brand" javaType="yahaha.gxshopping.domain.Brand">
+            <id column="brand_id" property="id"/>
+            <result column="brandName" property="name"/>
+        </association>
     </resultMap>
+
+    <select id="pageQuery" resultMap="BaseResultMap">
+        select p.*, pt.name typeName, b.name brandName, pt.path typePath
+        from t_product p
+            left join t_product_type pt on p.product_type_id = pt.id
+            left join t_brand b on p.brand_id = b.id
+        <include refid="keywordCondition"></include>
+    </select>
+    <sql id="keywordCondition">
+        <where>
+            <if test="#{query.keyword}!=null">
+                and ( p.name like concat('%',#{query.keyword},'%')
+                or p.subName like concat('%',#{query.keyword},'%') )
+            </if>
+        </where>
+    </sql>
 
 </mapper>
