@@ -1,6 +1,7 @@
 package yahaha.gxshopping.controller;
 
 import yahaha.gxshopping.domain.Brand;
+import yahaha.gxshopping.domain.Specification;
 import yahaha.gxshopping.query.BrandQuery;
 import yahaha.gxshopping.service.IProductService;
 import yahaha.gxshopping.domain.Product;
@@ -105,5 +106,35 @@ public class ProductController {
     @RequestMapping(value = "/queryPage", method = RequestMethod.POST)
     public PageList<Product> queryPage(@RequestBody ProductQuery productQuery){
         return productService.queryPage(productQuery);
+    }
+
+    /**
+     * 获取显示属性
+     * @param productId
+     * @return
+     */
+    @GetMapping("/getViewProperties")
+    public List<Specification> getViewProperties(Long productId){
+        return productService.getViewProperties(productId);
+    }
+
+    @PostMapping("/changeViewProperties")
+    public AjaxResult changeViewProperties(@RequestParam("productId") Long productId,
+                                           @RequestBody List<Specification> viewProperties){
+//        System.out.println(productId);
+//        viewProperties.forEach(e-> System.out.println(e));
+
+        try {
+            productService.changeViewProperties(productId,viewProperties);
+            return AjaxResult.me().setMessage("修改成功！");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return AjaxResult.me().setSuccess(false).setMessage("显示属性修改失败！"+e.getMessage());
+        }
+    }
+
+    @GetMapping("/getSkuProperties")
+    public List<Specification> getSkuProperties(Long productId){
+        return productService.getSkuProperties(productId);
     }
 }

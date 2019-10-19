@@ -5,7 +5,10 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.apache.ibatis.annotations.Param;
 import yahaha.gxshopping.domain.Product;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import yahaha.gxshopping.domain.Specification;
 import yahaha.gxshopping.query.ProductQuery;
+
+import java.util.List;
 
 /**
  * <p>
@@ -18,4 +21,7 @@ import yahaha.gxshopping.query.ProductQuery;
 public interface ProductMapper extends BaseMapper<Product> {
 
     IPage<Product> pageQuery(Page page, @Param("query")ProductQuery query);
+
+    void updateViewProperties(@Param("productId") Long productId,
+                              @Param("viewProperties") String viewProperties);
 }
