@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ade9b1e-c535-496b-9cfc-a58649542e64" name="Default Changelist" comment="配置中心">
+    <list default="true" id="3ade9b1e-c535-496b-9cfc-a58649542e64" name="Default Changelist" comment="显示属性显示和修改和Sku属性显示">
       <change afterPath="$PROJECT_DIR$/gxshopping-plat-parent/plat-service/target/classes/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-interface/src/main/java/yahaha/gxshopping/vo/SkuVo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gxshopping-product-parent/product-interface/src/main/java/yahaha/gxshopping/domain/Specification.java" beforeDir="false" afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-interface/src/main/java/yahaha/gxshopping/domain/Specification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gxshopping-product-parent/product-interface/src/main/java/yahaha/gxshopping/domain/Sku.java" beforeDir="false" afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-interface/src/main/java/yahaha/gxshopping/domain/Sku.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/java/yahaha/gxshopping/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/java/yahaha/gxshopping/controller/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/java/yahaha/gxshopping/mapper/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/java/yahaha/gxshopping/mapper/ProductMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/java/yahaha/gxshopping/mapper/SpecificationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/java/yahaha/gxshopping/mapper/SpecificationMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/java/yahaha/gxshopping/mapper/SkuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/java/yahaha/gxshopping/mapper/SkuMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/java/yahaha/gxshopping/service/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/java/yahaha/gxshopping/service/IProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/java/yahaha/gxshopping/service/ISkuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/java/yahaha/gxshopping/service/ISkuService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/java/yahaha/gxshopping/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/java/yahaha/gxshopping/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/java/yahaha/gxshopping/service/impl/SkuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/java/yahaha/gxshopping/service/impl/SkuServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/resources/yahaha/gxshopping/mapper/ProductMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gxshopping-product-parent/product-service/src/main/resources/yahaha/gxshopping/mapper/ProductMapper.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -119,13 +122,6 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="yahaha.gxshopping.service.impl" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\java\IdeaProjects\gxshopping\gxshopping-basic\basic-generator\src\main\resources\templates" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="yahaha.gxshopping.client.util" />
-      <recent name="yahaha.gxshopping.config" />
-    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -135,6 +131,13 @@
       <recent name="D:\java\IdeaProjects\gxshopping\gxshopping-common-parent\common-service\src\main\resources" />
       <recent name="D:\java\IdeaProjects\gxshopping\gxshopping-basic\basic-generator\src\main\resources" />
       <recent name="D:\java\IdeaProjects\gxshopping\gxshopping-basic\basic-util\src\main\java\yahaha\gxshopping\util" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="yahaha.gxshopping.client.util" />
+      <recent name="yahaha.gxshopping.config" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\java\IdeaProjects\gxshopping\gxshopping-basic\basic-generator\src\main\resources\templates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -245,18 +248,18 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ContributorNode@2d4db1" type="d2cb1801:ServiceModel$ContributorNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ContributorNode@5f768707" type="d2cb1801:ServiceModel$ContributorNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ContributorNode@2d4db1" type="d2cb1801:ServiceModel$ContributorNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@488d9c30" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ContributorNode@5f768707" type="d2cb1801:ServiceModel$ContributorNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@89795fa7" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ContributorNode@2d4db1" type="d2cb1801:ServiceModel$ContributorNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@488d9c30" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@b10d1424" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ContributorNode@5f768707" type="d2cb1801:ServiceModel$ContributorNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@89795fa7" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@d8367b72" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -300,7 +303,8 @@
       <workItem from="1571330738545" duration="1304000" />
       <workItem from="1571332135565" duration="48000" />
       <workItem from="1571359195773" duration="6164000" />
-      <workItem from="1571454668932" duration="10597000" />
+      <workItem from="1571454668932" duration="12766000" />
+      <workItem from="1571531903388" duration="12280000" />
     </task>
     <task id="LOCAL-00001" summary="配置中心">
       <created>1570678939954</created>
@@ -351,7 +355,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571332170149</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="显示属性显示和修改和Sku属性显示">
+      <created>1571473366911</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1571473366911</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,6 +390,7 @@
     <MESSAGE value="商品类型优化、Redis使用" />
     <MESSAGE value="分布式文件管理" />
     <MESSAGE value="商品信息CRUD" />
-    <option name="LAST_COMMIT_MESSAGE" value="商品信息CRUD" />
+    <MESSAGE value="显示属性显示和修改和Sku属性显示" />
+    <option name="LAST_COMMIT_MESSAGE" value="显示属性显示和修改和Sku属性显示" />
   </component>
 </project>

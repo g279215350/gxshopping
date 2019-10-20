@@ -1,11 +1,15 @@
 package yahaha.gxshopping.controller;
 
+import javafx.geometry.Pos;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import yahaha.gxshopping.domain.Brand;
 import yahaha.gxshopping.domain.Specification;
 import yahaha.gxshopping.query.BrandQuery;
 import yahaha.gxshopping.service.IProductService;
 import yahaha.gxshopping.domain.Product;
 import yahaha.gxshopping.query.ProductQuery;
+import yahaha.gxshopping.service.ISkuService;
 import yahaha.gxshopping.util.AjaxResult;
 import yahaha.gxshopping.util.PageList;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -13,14 +17,21 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import yahaha.gxshopping.util.StrUtils;
+import yahaha.gxshopping.vo.SkuVo;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/product")
 public class ProductController {
     @Autowired
-    public IProductService productService;
+    private IProductService productService;
+    @Autowired
+    private ISkuService iSkuService;
+
+    private Logger logger = LoggerFactory.getLogger(ProductController.class);
 
     /**
     * 保存和修改公用的
@@ -118,6 +129,12 @@ public class ProductController {
         return productService.getViewProperties(productId);
     }
 
+    /**
+     * 更新显示属性
+     * @param productId
+     * @param viewProperties
+     * @return
+     */
     @PostMapping("/changeViewProperties")
     public AjaxResult changeViewProperties(@RequestParam("productId") Long productId,
                                            @RequestBody List<Specification> viewProperties){
@@ -133,8 +150,37 @@ public class ProductController {
         }
     }
 
+    /**
+     * 获取Sku属性
+     * @param productId
+     * @return
+     */
+//    @GetMapping("/getSkuProperties")
+//    public List<Specification> getSkuProperties(Long productId){
+//        return productService.getSkuProperties(productId);
+//    }
     @GetMapping("/getSkuProperties")
-    public List<Specification> getSkuProperties(Long productId){
-        return productService.getSkuProperties(productId);
+    public Map<String, Object> getSkuProperties(Long productId){
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("skuProperties", productService.getSkuProperties(productId));
+        map.put("skus", iSkuService.findByProductId(productId));
+        return map;
+    }
+
+    /**
+     * 更新Sku属性
+     * @param skuVo
+     * @return
+     */
+    @PostMapping("/changeSkuProperties")
+    public AjaxResult changeSkuProperties(@RequestParam("productId") Long productId,@RequestBody SkuVo skuVo){
+
+        try {
+            productService.changeSkuProperties(productId, skuVo.getSkuProperties(), skuVo.getSkus());
+            return AjaxResult.me().setMessage("Sku属性更新成功！");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return AjaxResult.me().setSuccess(false).setMessage("更新Sku属性失败！");
+        }
     }
 }

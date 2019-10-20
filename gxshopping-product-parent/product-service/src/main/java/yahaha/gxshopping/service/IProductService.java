@@ -7,6 +7,7 @@ import yahaha.gxshopping.query.ProductQuery;
 import yahaha.gxshopping.util.PageList;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -25,4 +26,6 @@ public interface IProductService extends IService<Product> {
     void changeViewProperties(Long productId, List<Specification> viewProperties);
 
     List<Specification> getSkuProperties(Long productId);
+
+    void changeSkuProperties(Long productId, List<Specification> skuProperties, List<Map<String, String>> skus);
 }

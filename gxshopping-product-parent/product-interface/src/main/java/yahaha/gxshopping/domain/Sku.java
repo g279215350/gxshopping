@@ -101,7 +101,7 @@ public class Sku implements Serializable {
     @TableField("skuMainPic")
     private String skuMainPic;
 
-    private String indexs;
+    private String indexes;
 
 
 }

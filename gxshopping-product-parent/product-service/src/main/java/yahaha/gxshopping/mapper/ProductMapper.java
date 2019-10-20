@@ -24,4 +24,7 @@ public interface ProductMapper extends BaseMapper<Product> {
 
     void updateViewProperties(@Param("productId") Long productId,
                               @Param("viewProperties") String viewProperties);
+
+    void updateSkuProperties(@Param("productId") Long productId,
+                             @Param("skuProperties") String skuProperties);
 }

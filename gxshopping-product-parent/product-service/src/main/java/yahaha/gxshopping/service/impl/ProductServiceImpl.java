@@ -9,9 +9,11 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import yahaha.gxshopping.domain.Product;
 import yahaha.gxshopping.domain.ProductExt;
+import yahaha.gxshopping.domain.Sku;
 import yahaha.gxshopping.domain.Specification;
 import yahaha.gxshopping.mapper.ProductExtMapper;
 import yahaha.gxshopping.mapper.ProductMapper;
+import yahaha.gxshopping.mapper.SkuMapper;
 import yahaha.gxshopping.mapper.SpecificationMapper;
 import yahaha.gxshopping.query.ProductQuery;
 import yahaha.gxshopping.service.IProductService;
@@ -22,6 +24,7 @@ import yahaha.gxshopping.util.StrUtils;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -38,6 +41,8 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
     private ProductExtMapper productExtMapper;
     @Autowired
     private SpecificationMapper specificationMapper;
+    @Autowired
+    private SkuMapper skuMapper;
 
     @Override
     public PageList<Product> queryPage(ProductQuery productQuery) {
@@ -46,6 +51,11 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
         return new PageList<>(iPage.getTotal(), iPage.getRecords());
     }
 
+    /**
+     * 获取显示属性
+     * @param productId
+     * @return
+     */
     @Override
     public List<Specification> getViewProperties(Long productId) {
         Product product = baseMapper.selectById(productId);
@@ -58,11 +68,21 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
         }
     }
 
+    /**
+     * 更新显示属性
+     * @param productId
+     * @param viewProperties
+     */
     @Override
     public void changeViewProperties(Long productId, List<Specification> viewProperties) {
         baseMapper.updateViewProperties(productId,JSON.toJSONString(viewProperties));
     }
 
+    /**
+     * 获取Sku属性
+     * @param productId
+     * @return
+     */
     @Override
     public List<Specification> getSkuProperties(Long productId) {
         Product product = baseMapper.selectById(productId);
@@ -72,6 +92,46 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
         } else {
             return specificationMapper.selectList(new QueryWrapper<Specification>()
                     .eq("isSku", 1).eq("product_type_id", product.getProductTypeId()));
+        }
+    }
+
+    /**
+     * 更新Sku
+     *  更新skuProperties值，更新到t_product表
+     *
+     *  更新sku属性，更新到t_sku表
+     *      先删除原本数据，在添加当前数据
+     * @param productId
+     * @param skuProperties
+     * @param skus
+     */
+    @Override
+    public void changeSkuProperties(Long productId, List<Specification> skuProperties, List<Map<String, String>> skus) {
+        //更新skuProperties值，更新到t_product表
+        baseMapper.updateSkuProperties(productId, JSON.toJSONString(skuProperties));
+
+        //删除原本数据
+        skuMapper.delete(new QueryWrapper<Sku>().eq("product_id", productId));
+        //新增数据
+        Sku sku = null;
+        for (Map<String, String> skuMap : skus) {
+            sku = new Sku();
+            sku.setCreateTime(System.currentTimeMillis());
+            sku.setProductId(productId);
+            sku.setAvailableStock(Integer.valueOf(skuMap.get("store")));
+            sku.setMarketPrice(Integer.valueOf(skuMap.get("price")));
+            sku.setIndexes(skuMap.get("indexes"));
+            //设置skuName，拼接每个选项的值
+            StringBuilder sb = new StringBuilder();
+            for (Map.Entry<String, String> skuEntry : skuMap.entrySet()) {
+                if (!"price".equals(skuEntry.getKey())
+                        &&!"store".equals(skuEntry.getKey())
+                        &&!"indexes".equals(skuEntry.getKey())){
+                    sb.append(skuEntry.getValue());
+                }
+            }
+            sku.setSkuName(sb.toString());
+            skuMapper.insert(sku);
         }
     }
 

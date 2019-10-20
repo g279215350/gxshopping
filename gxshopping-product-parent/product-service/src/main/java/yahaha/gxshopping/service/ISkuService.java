@@ -3,6 +3,8 @@ package yahaha.gxshopping.service;
 import yahaha.gxshopping.domain.Sku;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.util.List;
+
 /**
  * <p>
  * SKU 服务类
@@ -13,4 +15,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface ISkuService extends IService<Sku> {
 
+    List<Sku> findByProductId(Long productId);
 }
