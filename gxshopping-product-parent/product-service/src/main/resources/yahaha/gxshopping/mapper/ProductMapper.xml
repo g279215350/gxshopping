@@ -45,6 +45,20 @@
     <update id="updateSkuProperties">
         update t_product set skuProperties = #{skuProperties} where id = #{productId}
     </update>
+    
+    <update id="updateOnSaleAllState">
+        update t_product set onSaleTime = #{onSaleTime}, state = 1 where id in
+        <foreach collection="idList" open="(" close=")" item="id" separator=",">
+            #{id}
+        </foreach>
+    </update>
+
+    <update id="updateOffSaleAllState">
+        update t_product set offSaleTime = #{offSaleTime}, state = 2 where id in
+        <foreach collection="idList" open="(" close=")" item="id" separator=",">
+            #{id}
+        </foreach>
+    </update>
 
     <select id="pageQuery" resultMap="BaseResultMap">
         select p.*, pt.name typeName, b.name brandName, pt.path typePath

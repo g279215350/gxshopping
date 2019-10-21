@@ -7,14 +7,11 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import yahaha.gxshopping.domain.Product;
-import yahaha.gxshopping.domain.ProductExt;
-import yahaha.gxshopping.domain.Sku;
-import yahaha.gxshopping.domain.Specification;
-import yahaha.gxshopping.mapper.ProductExtMapper;
-import yahaha.gxshopping.mapper.ProductMapper;
-import yahaha.gxshopping.mapper.SkuMapper;
-import yahaha.gxshopping.mapper.SpecificationMapper;
+import org.springframework.data.annotation.Id;
+import org.springframework.transaction.annotation.Transactional;
+import yahaha.gxshopping.client.ProductDocESClient;
+import yahaha.gxshopping.domain.*;
+import yahaha.gxshopping.mapper.*;
 import yahaha.gxshopping.query.ProductQuery;
 import yahaha.gxshopping.service.IProductService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -23,6 +20,7 @@ import yahaha.gxshopping.util.PageList;
 import yahaha.gxshopping.util.StrUtils;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -43,6 +41,12 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
     private SpecificationMapper specificationMapper;
     @Autowired
     private SkuMapper skuMapper;
+    @Autowired
+    private ProductDocESClient client;
+    @Autowired
+    private ProductTypeMapper productTypeMapper;
+    @Autowired
+    private BrandMapper brandMapper;
 
     @Override
     public PageList<Product> queryPage(ProductQuery productQuery) {
@@ -74,6 +78,7 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
      * @param viewProperties
      */
     @Override
+    @Transactional
     public void changeViewProperties(Long productId, List<Specification> viewProperties) {
         baseMapper.updateViewProperties(productId,JSON.toJSONString(viewProperties));
     }
@@ -106,6 +111,7 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
      * @param skus
      */
     @Override
+    @Transactional
     public void changeSkuProperties(Long productId, List<Specification> skuProperties, List<Map<String, String>> skus) {
         //更新skuProperties值，更新到t_product表
         baseMapper.updateSkuProperties(productId, JSON.toJSONString(skuProperties));
@@ -135,10 +141,94 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
         }
     }
 
+    /**
+     * 批量上架
+     * @param idsList
+     */
     @Override
+    @Transactional
+    public void onSaleBatch(List<Long> idsList) {
+        //修改数据库中数据的状态
+        baseMapper.updateOnSaleAllState(idsList, System.currentTimeMillis());
+        //获取上架的商品信息
+        List<Product> products = baseMapper.selectBatchIds(idsList);
+        //将上架的商品封装到ProductDoc以便添加到ES中
+        List<ProductDoc> productDocs = trans2Docs(products);
+        client.saveBatch(productDocs);
+    }
+
+    @Override
+    @Transactional
+    public void offSaleBatch(List<Long> idsList) {
+        //修改数据库中的状态
+        baseMapper.updateOffSaleAllState(idsList, System.currentTimeMillis());
+        //从ES中删除该数据
+        client.deleteBatch(idsList);
+    }
+
+    private List<ProductDoc> trans2Docs(List<Product> products) {
+        List<ProductDoc> productDocs = new ArrayList<>();
+        for (Product product : products) {
+            productDocs.add(trans2Doc(product));
+        }
+        return productDocs;
+    }
+
+    private ProductDoc trans2Doc(Product product) {
+        ProductDoc productDoc = new ProductDoc();
+        productDoc.setId(product.getId());
+
+        //all："商品标题 商品副标题 类型名称 品牌名称"中间拼接空格做分词用
+        StringBuilder all = new StringBuilder();
+        ProductType productType = productTypeMapper.selectById(product.getProductTypeId());
+        Brand brand = brandMapper.selectById(product.getBrandId());
+        all.append(product.getName())
+                .append(" ")
+                .append(product.getSubName())
+                .append(" ")
+                .append(productType.getName())
+                .append(" ")
+                .append(brand.getName());
+        productDoc.setAll(all.toString());
+
+        productDoc.setProductTypeId(product.getProductTypeId());
+        productDoc.setBrandId(product.getBrandId());
+
+        List<Sku> skus = skuMapper.selectList(new QueryWrapper<Sku>().eq("product_id", product.getId()));
+        Integer max = 0;
+        Integer min = 0;
+        if (skus != null && skus.size() > 0) {
+            min = skus.get(0).getMarketPrice();
+        }
+        for (Sku sku : skus) {
+            if (sku.getMarketPrice() > max) {
+                max = sku.getMarketPrice();
+            }
+            if (min > sku.getMarketPrice()) {
+                min = sku.getMarketPrice();
+            }
+        }
+        productDoc.setMaxPrice(max);
+        productDoc.setMinPrice(min);
+
+        productDoc.setSaleCount(product.getSaleCount());
+        productDoc.setOnSaleTime(product.getOnSaleTime());
+        productDoc.setCommentCount(product.getCommentCount());
+        productDoc.setViewCount(product.getViewCount());
+        productDoc.setName(product.getName());
+        productDoc.setSubName(product.getSubName());
+        productDoc.setMedias(product.getMedias());
+        productDoc.setViewProperties(product.getViewProperties());
+        productDoc.setSkuProperties(product.getSkuProperties());
+        return productDoc;
+    }
+
+    @Override
+    @Transactional
     public boolean save(Product product) {
         product.setCreateTime(System.currentTimeMillis());
-        baseMapper.insert(product); //MyBatis-Plus自动返回主键
+        //MyBatis-Plus自动返回主键
+        baseMapper.insert(product);
         ProductExt ext = product.getExt();
         ext.setProductId(product.getId());
         productExtMapper.insert(ext);
@@ -146,15 +236,17 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
     }
 
     @Override
+    @Transactional
     public boolean updateById(Product product) {
         product.setUpdateTime(System.currentTimeMillis());
-        Boolean result =  super.updateById(product);
+        boolean result =  super.updateById(product);
         ProductExt ext = product.getExt();
         productExtMapper.updateById(ext);
         return result;
     }
 
     @Override
+    @Transactional
     public boolean removeById(Serializable id) {
         productExtMapper.deleteByProductId(id);
         return super.removeById(id);

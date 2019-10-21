@@ -97,7 +97,7 @@ public class ProductTypeController {
      * 静态化首页
      * @return
      */
-    @PostMapping("/gendHomePage")
+    @PostMapping("/genHomePage")
     public AjaxResult genHomePage(){
         try {
             productTypeService.genHomePage();
