@@ -2,14 +2,18 @@ package yahaha.gxshopping.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import yahaha.gxshopping.client.RedisClient;
 import yahaha.gxshopping.client.StaticPageClient;
+import yahaha.gxshopping.domain.Product;
 import yahaha.gxshopping.domain.ProductType;
 import yahaha.gxshopping.mapper.ProductTypeMapper;
 import yahaha.gxshopping.service.IProductTypeService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
+import yahaha.gxshopping.util.StrUtils;
+import yahaha.gxshopping.vo.ProductTypeCrumbVo;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -50,6 +54,47 @@ public class ProductTypeServiceImpl extends ServiceImpl<ProductTypeMapper, Produ
         Map<String,Object> model = new HashMap<>();
         model.put("staticRoot","D:\\java\\IdeaProjects\\gxshopping\\gxshopping-product-parent\\product-service\\src\\main\\resources\\");
         staticPageClient.creatStaticPage(templatePath,targetPath,model);
+    }
+
+    /**
+     * 获取面包屑中类型数据
+     * @param productTypeId
+     * @return
+     */
+    @Override
+    public List<ProductTypeCrumbVo> productTypeCrumb(Long productTypeId) {
+        //获取当前类型
+        ProductType currentType = baseMapper.selectById(productTypeId);
+        //获取当前类型的path
+        String path = currentType.getPath();
+        List<Long> idList = getIdList(path);
+        List<ProductTypeCrumbVo> result = new ArrayList<>();
+        List<ProductType> productTypes = baseMapper.selectBatchIds(idList);
+        List<ProductType> otherType;
+        for (ProductType productType : productTypes) {
+            ProductTypeCrumbVo vo = new ProductTypeCrumbVo();
+            //设置当前类型
+            vo.setCurrentType(productType);
+            //设置同类类型
+            otherType = baseMapper.selectList(new QueryWrapper<ProductType>().eq("pid", productType.getPid()));
+            vo.setOtherTypes(otherType);
+            result.add(vo);
+        }
+        return result;
+    }
+
+    /**
+     * 将path路径转换为id数组
+     * @param path
+     * @return
+     */
+    private List<Long> getIdList(String path) {
+        String[] split = path.substring(1).split("\\.");
+        List<Long> idList = new ArrayList<>();
+        for (String s : split) {
+            idList.add(Long.valueOf(s));
+        }
+        return idList;
     }
 
     /**

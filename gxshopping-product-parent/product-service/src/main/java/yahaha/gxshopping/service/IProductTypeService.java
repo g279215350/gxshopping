@@ -2,6 +2,7 @@ package yahaha.gxshopping.service;
 
 import yahaha.gxshopping.domain.ProductType;
 import com.baomidou.mybatisplus.extension.service.IService;
+import yahaha.gxshopping.vo.ProductTypeCrumbVo;
 
 import java.util.List;
 
@@ -21,4 +22,5 @@ public interface IProductTypeService extends IService<ProductType> {
 
     void genHomePage();
 
+    List<ProductTypeCrumbVo> productTypeCrumb(Long productTypeId);
 }

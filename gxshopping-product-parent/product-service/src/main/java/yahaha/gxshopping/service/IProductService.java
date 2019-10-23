@@ -2,6 +2,8 @@ package yahaha.gxshopping.service;
 
 import yahaha.gxshopping.domain.Product;
 import com.baomidou.mybatisplus.extension.service.IService;
+import yahaha.gxshopping.domain.ProductDoc;
+import yahaha.gxshopping.domain.ProductParam;
 import yahaha.gxshopping.domain.Specification;
 import yahaha.gxshopping.query.ProductQuery;
 import yahaha.gxshopping.util.PageList;
@@ -65,4 +67,11 @@ public interface IProductService extends IService<Product> {
      * @param idsList
      */
     void offSaleBatch(List<Long> idsList);
+
+    /**
+     * 条件搜索结果获取
+     * @param param
+     * @return
+     */
+    PageList<ProductDoc> queryOnSale(ProductParam param);
 }

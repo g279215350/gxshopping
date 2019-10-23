@@ -3,11 +3,9 @@ package yahaha.gxshopping.controller;
 import javafx.geometry.Pos;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import yahaha.gxshopping.domain.Brand;
-import yahaha.gxshopping.domain.Specification;
+import yahaha.gxshopping.domain.*;
 import yahaha.gxshopping.query.BrandQuery;
 import yahaha.gxshopping.service.IProductService;
-import yahaha.gxshopping.domain.Product;
 import yahaha.gxshopping.query.ProductQuery;
 import yahaha.gxshopping.service.ISkuService;
 import yahaha.gxshopping.util.AjaxResult;
@@ -199,6 +197,11 @@ public class ProductController {
         }
     }
 
+    /**
+     * 商品批量下架
+     * @param ids
+     * @return
+     */
     @GetMapping("/offSale")
     public AjaxResult offSale(@RequestParam("ids") String ids){
         try {
@@ -208,5 +211,16 @@ public class ProductController {
             e.printStackTrace();
             return AjaxResult.me().setSuccess(false).setMessage("下架失败！");
         }
+    }
+
+    /**
+     * 条件搜索商品获取
+     * @param param
+     * @return
+     */
+    @PostMapping("/queryOnSale")
+    public PageList<ProductDoc> queryOnSale(@RequestBody ProductParam param){
+        System.out.println(param);
+        return productService.queryOnSale(param);
     }
 }

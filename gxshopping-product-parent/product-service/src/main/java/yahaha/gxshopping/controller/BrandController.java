@@ -11,6 +11,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import yahaha.gxshopping.util.StrUtils;
+import yahaha.gxshopping.vo.BrandVo;
 
 import java.util.List;
 
@@ -106,5 +107,10 @@ public class BrandController {
     @RequestMapping(value = "/queryPage", method = RequestMethod.POST)
     public PageList<Brand> queryPage(@RequestBody BrandQuery brandQuery){
         return brandService.queryPage(brandQuery);
+    }
+
+    @GetMapping("/crumbBrands")
+    public BrandVo crumbBrands(Long productTypeId){
+        return brandService.brandsCrumb(productTypeId);
     }
 }

@@ -4,6 +4,8 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import yahaha.gxshopping.domain.ProductDoc;
+import yahaha.gxshopping.domain.ProductParam;
+import yahaha.gxshopping.util.PageList;
 
 import java.util.List;
 
@@ -26,4 +28,12 @@ public interface ProductDocESClient {
      */
     @PostMapping("/es/deleteBatch")
     void deleteBatch(@RequestBody List<Long> ids);
+
+    /**
+     * 条件搜索商品数据
+     * @param param
+     * @return
+     */
+    @PostMapping("/es/products")
+    PageList<ProductDoc> search(@RequestBody ProductParam param);
 }

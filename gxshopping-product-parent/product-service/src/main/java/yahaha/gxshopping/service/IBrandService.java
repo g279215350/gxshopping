@@ -7,6 +7,9 @@ import yahaha.gxshopping.domain.Brand;
 import com.baomidou.mybatisplus.extension.service.IService;
 import yahaha.gxshopping.query.BrandQuery;
 import yahaha.gxshopping.util.PageList;
+import yahaha.gxshopping.vo.BrandVo;
+
+import java.util.List;
 
 /**
  * <p>
@@ -19,4 +22,6 @@ import yahaha.gxshopping.util.PageList;
 public interface IBrandService extends IService<Brand> {
 
     PageList<Brand> queryPage(BrandQuery brandQuery);
+
+    BrandVo brandsCrumb(Long productTypeId);
 }

@@ -9,6 +9,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import yahaha.gxshopping.vo.ProductTypeCrumbVo;
 
 import java.util.List;
 
@@ -106,5 +107,15 @@ public class ProductTypeController {
             e.printStackTrace();
             return AjaxResult.me().setSuccess(false).setMessage("失败!"+e.getMessage());
         }
+    }
+
+    /**
+     * 获取到面包屑中的类型
+     * @param productTypeId
+     * @return
+     */
+    @GetMapping("/crumb")
+    public List<ProductTypeCrumbVo> productTypeCrumb(@RequestParam("productTypeId") Long productTypeId){
+        return productTypeService.productTypeCrumb(productTypeId);
     }
 }

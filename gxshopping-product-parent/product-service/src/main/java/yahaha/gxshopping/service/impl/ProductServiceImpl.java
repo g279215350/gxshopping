@@ -166,6 +166,11 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
         client.deleteBatch(idsList);
     }
 
+    @Override
+    public PageList<ProductDoc> queryOnSale(ProductParam param) {
+        return client.search(param);
+    }
+
     private List<ProductDoc> trans2Docs(List<Product> products) {
         List<ProductDoc> productDocs = new ArrayList<>();
         for (Product product : products) {
